@@ -8,10 +8,12 @@ Actualmente trabajo con **Java Spring Boot** en el backend y **Angular** en el f
 
 ## 🛠️ Tecnologías y Habilidades
 
-**Backend:** Java, Spring Boot, PHP, Python (básico)  
-**Frontend:** Angular, HTML, CSS, JavaScript, TypeScript, Vue.js (básico)  
-**Bases de Datos:** SQL Server, MySQL, PostgreSQL, Oracle DB  
-**Herramientas:** Git, Linux, Microsoft Office, Jira, ServiceNow, SSH  
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)  ![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)  ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
 **Habilidades Blandas:** Trabajo en equipo, resolución de problemas, comunicación efectiva, aprendizaje continuo
 
 ---
@@ -30,10 +32,11 @@ Actualmente trabajo con **Java Spring Boot** en el backend y **Angular** en el f
 
 ---
 
-## 📊 Estadísticas de GitHub
+## 📊 Estadísticas Resumidas
 
-![Daniel's GitHub stats](https://github-readme-stats.vercel.app/api?username=JohnDanDev&show_icons=true&theme=blueberry)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JohnDanDev&layout=compact&theme=blueberry)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=JohnDanDev&theme=blueberry)  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=JohnDanDev&show_icons=true&theme=blueberry&count_private=true)
+
+*Estas estadísticas se actualizan automáticamente según tu actividad en GitHub.*
 
 ---
 
@@ -45,4 +48,36 @@ Actualmente trabajo con **Java Spring Boot** en el backend y **Angular** en el f
 ---
 
 Gracias por visitar mi perfil. ¡Siempre abierto a colaborar en nuevos proyectos y aprender nuevas tecnologías! 😎
+
+---
+
+## ⚙️ Automatización con GitHub Actions
+
+Puedes crear un workflow en `.github/workflows/update-stats.yml` para actualizar automáticamente tu README y estadísticas cada día o con cada push. Ejemplo básico:
+
+```yaml
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Corre diariamente a medianoche UTC
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Commit README update
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add README.md
+          git commit -m 'Auto-update GitHub stats' || echo 'No changes to commit'
+          git push
+```
 
