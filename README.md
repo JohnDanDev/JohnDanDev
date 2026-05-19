@@ -34,7 +34,7 @@ Actualmente trabajo con **Java Spring Boot** en el backend y **Angular** en el f
 
 ## 📊 Estadísticas Resumidas
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=JohnDanDev&theme=blueberry)  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=JohnDanDev&show_icons=true&theme=blueberry&count_private=true)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=JohnDanDev&theme=blueberry)
 
 *Estas estadísticas se actualizan automáticamente según tu actividad en GitHub.*
 
